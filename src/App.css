@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.flip-box {
+  width: 350px;
+  height: 450px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.flip-box-inner {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
